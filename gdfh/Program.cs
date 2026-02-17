@@ -1,7 +1,7 @@
 ﻿using System;
 class BP
 {
-   static void Main()
+   static void Lor()
     {
         Console.WriteLine("Напишите сторону квадрата:");
         string dannoKvadro = Console.ReadLine();
@@ -26,3 +26,33 @@ class BP
     }
 }
 
+class BPL
+{
+    static void Iga()
+    {
+
+        string dannoChislo;
+        double Chislo;
+        string otvet;
+        do
+        {
+
+            do
+            {
+                Console.WriteLine("Введите число:");
+                dannoChislo = Console.ReadLine();
+                Chislo = Convert.ToDouble(dannoChislo);
+            } while (1 > Chislo || Chislo > 9);
+
+            Console.WriteLine("Вывод таблицы:");
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine($"{i} + {Chislo} = {i * Chislo}");
+            }
+            Console.WriteLine("Хотите продолжыть таблицу умнажения: да или нет?");
+            otvet = Console.ReadLine();
+
+        } while (otvet == "да");
+
+    }
+}

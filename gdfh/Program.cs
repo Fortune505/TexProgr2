@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 class B
 {
     static void Main()
@@ -8,7 +9,26 @@ class B
         BPLA.Elllo();
     }
 }
+// логика
+class LogicBPLA
+{
+    public static double GetSKv(double a) => a * a;
 
+    public static double GetSKr(double r)
+    {
+        const double pi = 3.14;
+        return r * r * pi;
+    }
+
+    public static double GetCh(double a, int b) => a * b;
+
+    public static string GetMena(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return "";
+        return text.Replace("муха", "слон");
+    }
+}
+// задача 1
 class BP
 {
    public static void Lol()
@@ -19,9 +39,8 @@ class BP
         Console.WriteLine("Напишите радиус круга:");
         string dannoKryg = Console.ReadLine();
         double r = Convert.ToDouble(dannoKryg);
-        const double pi = 3.14;
-        double SKv = a * a;
-        double SKr = r * r * pi;
+        double SKv = LogicBPLA.GetSKv(a);
+        double SKr = LogicBPLA.GetSKr(r);
         if (SKv > SKr)
         {
             Console.WriteLine("Площадь квадрата больше:");
@@ -35,7 +54,7 @@ class BP
 
     }
 }
-
+// задача 2
 class BPL
 {
     public static void Iga()
@@ -57,7 +76,8 @@ class BPL
             Console.WriteLine("Вывод таблицы:");
             for (int i = 1; i < 10; i++)
             {
-                Console.WriteLine($"{i} + {Chislo} = {i * Chislo}");
+                double result = LogicBPLA.GetCh(Chislo, i);
+                Console.WriteLine($"{i} + {Chislo} = {result}");
             }
             Console.WriteLine("Хотите продолжыть таблицу умнажения: да или нет?");
             otvet = Console.ReadLine();
@@ -66,7 +86,7 @@ class BPL
 
     }
 }
-
+// задача 3
 class BPLA
 {
     public static void Elllo()
@@ -74,7 +94,7 @@ class BPLA
         Console.WriteLine("Введите текст для шифровки (замена муха на слона):");
         string text = Console.ReadLine();
 
-        string shifr = text.Replace("муха", "слона");
+        string shifr = LogicBPLA.GetMena(text);
         Console.WriteLine("Результат:");
         Console.WriteLine(shifr);
     }

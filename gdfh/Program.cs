@@ -1,7 +1,17 @@
 ﻿using System;
+class B
+{
+    static void Main()
+    {
+        BP.Lol();
+        BPL.Iga();
+        BPLA.Elllo();
+    }
+}
+
 class BP
 {
-   static void Lor()
+   public static void Lol()
     {
         Console.WriteLine("Напишите сторону квадрата:");
         string dannoKvadro = Console.ReadLine();
@@ -28,7 +38,7 @@ class BP
 
 class BPL
 {
-    static void Iga()
+    public static void Iga()
     {
 
         string dannoChislo;
@@ -56,3 +66,17 @@ class BPL
 
     }
 }
+
+class BPLA
+{
+    public static void Elllo()
+    {
+        Console.WriteLine("Введите текст для шифровки (замена муха на слона):");
+        string text = Console.ReadLine();
+
+        string shifr = text.Replace("муха", "слона");
+        Console.WriteLine("Результат:");
+        Console.WriteLine(shifr);
+    }
+}
+

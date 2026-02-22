@@ -10,7 +10,7 @@ class B
     }
 }
 // логика
-class LogicBPLA
+public class LogicBPLA
 {
     public static double GetSKv(double a) => a * a;
 

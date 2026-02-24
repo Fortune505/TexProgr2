@@ -86,7 +86,7 @@ class BPL
 
     }
 }
-// задача 3
+// задача 3 
 class BPLA
 {
     public static void Elllo()
